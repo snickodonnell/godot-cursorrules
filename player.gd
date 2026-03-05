@@ -3,7 +3,7 @@ class_name Player
 
 var speed: float = 200.0
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var visual: ColorRect = $Visual
 
 
 func _physics_process(delta: float) -> void:
