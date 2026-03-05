@@ -1,12 +1,12 @@
 extends CharacterBody2D
 class_name Player
 
-const MOVE_SPEED: float = 200.0
+var speed: float = 200.0
 
 @onready var sprite: Sprite2D = $Sprite2D
 
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = direction * MOVE_SPEED
+	velocity = direction * speed
 	move_and_slide()
